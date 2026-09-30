@@ -1,0 +1,273 @@
+:root {
+    --bg-dark-blue: #021a38;
+    --bg-light-blue: #f2f6fa;
+    --text-dark: #021a38;
+    --text-light: #ffffff;
+    --border-color: #021a38;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-light-blue);
+    color: var(--text-dark);
+}
+
+/* Header Styles */
+.logo-header {
+    background-color: var(--bg-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem 6rem; /* Extra padding at bottom to overlap form a bit */
+}
+
+.logo-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-rebeca {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--bg-dark-blue);
+    text-shadow: 
+        -2px -2px 0 var(--text-light),  
+         2px -2px 0 var(--text-light),
+        -2px  2px 0 var(--text-light),
+         2px  2px 0 var(--text-light);
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.logo-mendes {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--text-light);
+    line-height: 1;
+    margin-top: -5px;
+    letter-spacing: 2px;
+}
+
+.logo-subtitle {
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-top: 5px;
+}
+
+/* Form Styles */
+.form-wrapper {
+    max-width: 900px;
+    margin: -3rem auto 3rem;
+    background-color: var(--text-light);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.form-title-pill {
+    background-color: var(--bg-dark-blue);
+    color: var(--text-light);
+    display: table;
+    margin: -3.5rem auto 2rem;
+    padding: 0.6rem 2rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.form-section {
+    background-color: var(--bg-light-blue);
+    border-radius: 20px;
+    padding: 2.5rem 2rem 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-title-wrapper {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.section-title-pill {
+    background-color: var(--bg-dark-blue);
+    color: var(--text-light);
+    padding: 0.4rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.form-group label {
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+.form-group.row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px 0;
+}
+
+.form-group.row-multi {
+    display: flex;
+    align-items: baseline;
+    gap: 10px 15px;
+    flex-wrap: wrap;
+}
+
+.form-group.col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Input Styling (Dashed Bottom) */
+.dashed-input {
+    border: none;
+    border-bottom: 2px dashed var(--border-color);
+    background: transparent;
+    padding: 5px 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.3s;
+    min-width: 0;
+}
+
+.dashed-input:focus {
+    border-bottom: 2px solid #0056b3;
+}
+
+/* Filled state for inputs */
+.dashed-input.filled {
+    border-bottom: 2px solid #0056b3;
+    color: #0056b3;
+    font-weight: 800;
+}
+
+textarea.dashed-input {
+    resize: vertical;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+}
+textarea.dashed-input:focus {
+    border: 2px solid #0056b3;
+}
+
+.flex-grow { flex-grow: 1; min-width: 0; }
+.flex-1 { flex: 1; min-width: 0; }
+.flex-2 { flex: 2; min-width: 0; }
+.ml-auto { margin-left: 30px; }
+
+/* Radio Buttons */
+.radio-group {
+    display: flex;
+    gap: 15px;
+    font-weight: 600;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.radio-group label:has(input:checked) {
+    color: #0056b3;
+    font-weight: 800;
+}
+
+.radio-group input[type="radio"] {
+    accent-color: var(--bg-dark-blue);
+    transform: scale(1.2);
+}
+
+.row-radios {
+    margin-left: 10px;
+}
+
+/* Submit Button */
+.submit-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.submit-btn {
+    background-color: var(--bg-dark-blue);
+    color: var(--text-light);
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(2, 26, 56, 0.3);
+}
+
+.submit-btn:hover {
+    background-color: #032b5e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(2, 26, 56, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-group.row, .form-group.row-multi {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .form-group.row label, .form-group.row-multi label {
+        margin-right: 0;
+        margin-left: 0 !important;
+    }
+
+    .radio-group.row-radios {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    
+    .logo-rebeca { font-size: 2.5rem; }
+    .logo-mendes { font-size: 3rem; }
+    .logo-subtitle { font-size: 0.8rem; }
+    
+    .form-wrapper { margin: -2rem 1rem 2rem; }
+    .form-title-pill { margin: -3rem auto 2rem; font-size: 0.9rem; text-align: center; }
+}

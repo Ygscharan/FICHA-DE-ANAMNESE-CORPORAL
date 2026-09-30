@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Anamnese - Rebeca Mendes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="logo-header">
+        <div class="logo-container">
+            <h1 class="logo-rebeca">REBECA</h1>
+            <h1 class="logo-mendes">MENDES</h1>
+            <p class="logo-subtitle">PERSONAL TRAINER</p>
+        </div>
+    </header>
+
+    <main class="form-wrapper">
+        <div class="form-title-pill">FICHA DE ANAMNESE CORPORAL</div>
+
+        <form id="anamnese-form" action="https://formspree.io/f/xwlpzrey" method="POST">
+
+            <div class="form-section">
+                <div class="section-title-wrapper">
+                    <span class="section-title-pill">DADOS PESSOAIS</span>
+                </div>
+
+                <div class="form-group row">
+                    <label for="nome">NOME:</label>
+                    <input type="text" id="nome" name="Nome" required class="dashed-input flex-grow">
+                </div>
+
+                <div class="form-group row-multi">
+                    <label for="idade">IDADE:</label>
+                    <input type="text" id="idade" name="Idade" required class="dashed-input flex-1">
+
+                    <label for="altura">ALTURA:</label>
+                    <input type="text" id="altura" name="Altura" required class="dashed-input flex-1">
+
+                    <label for="peso">PESO (KG):</label>
+                    <input type="text" id="peso" name="Peso" required class="dashed-input flex-1">
+                </div>
+
+                <div class="form-group row-multi">
+                    <label for="profissao">PROFISSÃO:</label>
+                    <input type="text" id="profissao" name="Profissao" class="dashed-input flex-2">
+
+                    <label for="telefone">CONTATO:</label>
+                    <input type="tel" id="telefone" name="Telefone" required class="dashed-input flex-2">
+                </div>
+
+                <div class="form-group row">
+                    <label for="email">E-MAIL:</label>
+                    <input type="email" id="email" name="Email" required class="dashed-input flex-grow">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-title-wrapper">
+                    <span class="section-title-pill">EXERCÍCIO FÍSICO</span>
+                </div>
+
+                <div class="form-group col">
+                    <label>QUAL SEU NÍVEL ATUAL DE ATIVIDADE FÍSICA?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="NivelAtividade" value="Sedentário" required> Sedentário</label>
+                        <label><input type="radio" name="NivelAtividade" value="Iniciante"> Iniciante</label>
+                        <label><input type="radio" name="NivelAtividade" value="Intermediário"> Intermediário</label>
+                        <label><input type="radio" name="NivelAtividade" value="Avançado"> Avançado</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label>JÁ PRATICOU MUSCULAÇÃO ANTES?</label>
+                    <div class="radio-group row-radios">
+                        <label><input type="radio" name="JaPraticouMusculacao" value="Sim" required> Sim</label>
+                        <label><input type="radio" name="JaPraticouMusculacao" value="Não"> Não</label>
+                    </div>
+                    <label for="tempo_musculacao" class="ml-auto">SE SIM, POR QUANTO TEMPO?</label>
+                    <input type="text" id="tempo_musculacao" name="TempoMusculacao" class="dashed-input flex-2">
+                </div>
+
+                <div class="form-group col">
+                    <label for="outra_atividade">PRATICA ALGUMA OUTRA ATIVIDADE FÍSICA? QUAL (IS)?</label>
+                    <input type="text" id="outra_atividade" name="OutraAtividadeFisica" class="dashed-input">
+                </div>
+
+                <div class="form-group row-multi">
+                    <label for="horario_atividade">SE SIM, EM QUAL HORÁRIO?</label>
+                    <input type="text" id="horario_atividade" name="HorarioAtividade"
+                        placeholder="Ex: das 19h00 às 21h00" class="dashed-input flex-1">
+
+                    <label for="frequencia_atividade">COM QUAL FREQUÊNCIA?</label>
+                    <input type="text" id="frequencia_atividade" name="FrequenciaAtividade" class="dashed-input flex-1">
+                </div>
+
+                <div class="form-group row-multi">
+                    <label for="duracao_atividade">TEMPO (DURAÇÃO):</label>
+                    <input type="text" id="duracao_atividade" name="DuracaoAtividade" class="dashed-input flex-1">
+                </div>
+
+                <div class="form-group col">
+                    <label for="pretensao_musculacao">PRETENDE PRATICAR MUSCULAÇÃO QUANTAS VEZES NA SEMANA?</label>
+                    <input type="text" id="pretensao_musculacao" name="PretensaoMusculacao" class="dashed-input">
+                </div>
+
+                <div class="form-group col">
+                    <label for="tempo_disponivel">TEMPO DISPONÍVEL PARA TREINO? (EX: 45 MIN, 1 HORA...)</label>
+                    <input type="text" id="tempo_disponivel" name="TempoDisponivelTreino" class="dashed-input">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-title-wrapper">
+                    <span class="section-title-pill">DADOS CLÍNICOS / PATOLOGIAS</span>
+                </div>
+
+                <div class="form-group col">
+                    <label for="objetivos">QUAIS OS SEUS OBJETIVOS ATUALMENTE? (EMAGRECER, GANHAR MASSA
+                        MAGRA...)</label>
+                    <input type="text" id="objetivos" name="ObjetivosAtuais" required class="dashed-input">
+                </div>
+
+                <div class="form-group col">
+                    <label for="dificuldades">QUAL(AIS) A(S) SUA(S) MAIOR(ES) DIFICULDADES?</label>
+                    <input type="text" id="dificuldades" name="MaioresDificuldades" required class="dashed-input">
+                </div>
+
+                <div class="form-group col">
+                    <label for="lesoes">POSSUI ALGUMA LESÃO OU CIRURGIA? SENTE DORES?</label>
+                    <input type="text" id="lesoes" name="LesoesCirurgias" class="dashed-input">
+                </div>
+
+                <div class="form-group col">
+                    <label for="patologias">POSSUI ALGUMA PATOLOGIA? (DEPRESSÃO, ANSIEDADE, HIPERTENSÃO...)</label>
+                    <input type="text" id="patologias" name="Patologias" class="dashed-input">
+                </div>
+
+                <div class="form-group col">
+                    <label for="medicamentos_controlados">FAZ USO DE MEDICAMENTOS CONTROLADOS? SE SIM, QUAL(IS)?</label>
+                    <input type="text" id="medicamentos_controlados" name="MedicamentosControlados"
+                        class="dashed-input">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-title-wrapper">
+                    <span class="section-title-pill">ALIMENTAÇÃO</span>
+                </div>
+
+                <div class="form-group row">
+                    <label for="acompanhamento_nutricional">FAZ ACOMPANHAMENTO NUTRICIONAL? SE SIM, HÁ QUANTO
+                        TEMPO?</label>
+                    <input type="text" id="acompanhamento_nutricional" name="AcompanhamentoNutricional"
+                        class="dashed-input flex-grow">
+                </div>
+
+                <div class="form-group col">
+                    <label for="medicamentos_emagrecimento">FAZ USO DE MEDICAMENTOS PARA EMAGRECIMENTO OU
+                        HORMÔNIOS?</label>
+                    <input type="text" id="medicamentos_emagrecimento" name="MedicamentosEmagrecimento"
+                        class="dashed-input">
+                </div>
+
+                <div class="form-group col">
+                    <label for="suplementos">UTILIZA SUPLEMENTOS ALIMENTARES? (WHEY, CREATINA...)</label>
+                    <input type="text" id="suplementos" name="SuplementosAlimentares" class="dashed-input">
+                </div>
+
+                <div class="form-group row">
+                    <label>POSSUI ALERGIA OU INTOLERÂNCIA?</label>
+                    <div class="radio-group row-radios">
+                        <label><input type="radio" name="Alergia" value="Sim" required> Sim</label>
+                        <label><input type="radio" name="Alergia" value="Não"> Não</label>
+                    </div>
+                    <label for="qual_alergia" class="ml-auto">SE SIM, QUAL?</label>
+                    <input type="text" id="qual_alergia" name="QualAlergia" class="dashed-input flex-2">
+                </div>
+
+                <div class="form-group row">
+                    <label>VEGETARIANO/ VEGANO?</label>
+                    <div class="radio-group row-radios">
+                        <label><input type="radio" name="Dieta" value="Vegetariano" required> Vegetariano</label>
+                        <label><input type="radio" name="Dieta" value="Vegano"> Vegano</label>
+                        <label><input type="radio" name="Dieta" value="Não"> Nenhum</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label>CONSOME ÁLCOOL?</label>
+                    <div class="radio-group row-radios">
+                        <label><input type="radio" name="Alcool" value="Sim" required> Sim</label>
+                        <label><input type="radio" name="Alcool" value="Não"> Não</label>
+                    </div>
+                    <label for="freq_alcool" class="ml-auto">SE SIM, COM QUAL FREQUÊNCIA?</label>
+                    <input type="text" id="freq_alcool" name="FrequenciaAlcool" class="dashed-input flex-2">
+                </div>
+
+                <div class="form-group row">
+                    <label>TABAGISMO?</label>
+                    <div class="radio-group row-radios">
+                        <label><input type="radio" name="Tabagismo" value="Sim" required> Sim</label>
+                        <label><input type="radio" name="Tabagismo" value="Não"> Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-title-wrapper">
+                    <span class="section-title-pill">ROTINA</span>
+                </div>
+
+                <div class="form-group col">
+                    <label for="rotina_dia">DESCREVA BREVEMENTE SUA ROTINA DE TRABALHO E DIA A DIA:</label>
+                    <input type="text" id="rotina_dia" name="RotinaDiaADia" class="dashed-input">
+                </div>
+
+                <div class="form-group row-multi">
+                    <label for="horas_em_pe">QUANTAS HORAS POR DIA PASSA EM PÉ?</label>
+                    <input type="text" id="horas_em_pe" name="HorasEmPe" class="dashed-input flex-1">
+
+                    <label for="horas_sentado">SENTADO?</label>
+                    <input type="text" id="horas_sentado" name="HorasSentado" class="dashed-input flex-1">
+                </div>
+
+                <div class="form-group row">
+                    <label>QUAL A QUALIDADE DO SEU SONO?</label>
+                    <div class="radio-group row-radios">
+                        <label><input type="radio" name="QualidadeSono" value="Boa" required> Boa</label>
+                        <label><input type="radio" name="QualidadeSono" value="Ótima"> Ótima</label>
+                        <label><input type="radio" name="QualidadeSono" value="Ruim"> Ruim</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="horas_sono">QUANTAS HORAS DORME POR DIA?</label>
+                    <input type="text" id="horas_sono" name="HorasSono" class="dashed-input flex-1">
+                </div>
+
+                <div class="form-group row">
+                    <label for="caminhar">VOCÊ COSTUMA ANDAR/CAMINHAR BASTANTE?</label>
+                    <input type="text" id="caminhar" name="CostumaCaminhar" class="dashed-input flex-grow">
+                </div>
+
+                <div class="form-group col">
+                    <label for="outras_infos">HÁ MAIS ALGUMA COISA QUE VOCÊ QUEIRA OU PRECISE ME CONTAR?</label>
+                    <textarea id="outras_infos" name="InformacoesAdicionais" class="dashed-input" rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="submit-wrapper">
+                <button type="submit" class="submit-btn">ENVIAR FICHA DE ANAMNESE</button>
+            </div>
+
+        </form>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
