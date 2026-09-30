@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Animação da tela de entrada (Splash Screen)
+    const splashScreen = document.getElementById('splash-screen');
+    if (splashScreen) {
+        // Bloqueia a rolagem da página enquanto a tela inicial aparece
+        document.body.style.overflow = 'hidden';
+        
+        // Remove a tela após 3.5 segundos
+        setTimeout(() => {
+            splashScreen.classList.add('hide');
+            document.body.style.overflow = 'auto';
+        }, 3500);
+    }
+
     const form = document.getElementById('anamnese-form');
     const allInputs = form.querySelectorAll('input, textarea');
 
